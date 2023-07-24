@@ -31,7 +31,14 @@ nav {
         color: white;
         padding-top: 2.5vh;
     }
-   
+
+    a:hover { 
+        text-decoration: underline;
+        text-decoration-color: #f8b400; 
+        text-underline-offset: 10px;
+        margin-bottom: 2vh;
+        margin-top: 0;
+    }
     .navButtons{ 
         margin-right: 2vw;
         display: flex;
@@ -63,9 +70,9 @@ header {
 }
 
 .aboutMe { 
-    border: solid 2px $primaryColour;
+    margin: 10%;
+    padding: 5%;
     height: 90vh;
-    background-color: rgb(255, 255, 255);
     font-family: $primaryFont;
     display: flex;
     flex-direction: column;
@@ -76,12 +83,21 @@ header {
         color: $primaryColour;
     }
     .aboutMeText{
-    display: flex;
+        width: 50vw;
+        height: 80vh;
+        display: flex;
+        text-align: justify;
     p {
     padding-right: 2.5%;
-    padding-left: 2.5%
+    padding-left: 2.5%; 
+    color: $primaryColour;
     }
-    }
+}
+}
+
+#about { 
+    background-color: $creamColour;
+    padding: 5%;
 }
 
 .codingSkills { 
@@ -143,29 +159,96 @@ header {
 }
 
 .portfolio  { 
-    height: 130vh; 
+    height: 160vh; 
     background-color: rgb(253, 253, 253);
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    
     h3{
         font-family: $primaryFont;
+        color: $primaryColour;
+        font-size: 2rem;
     }
     img {
-        padding: 5%;
-        max-width: 40vw;
-        max-height: 30vh;
-        min-width: 30vw;
-        min-height: 20vh;
+        margin: 2%;
+        width: 30vw;
+        height: 25vh;
+    }
+    .project {
         display: flex;
+        flex-direction: row;
+        margin: 3%;
+        font-family: $primaryFont;
+        justify-content: center;
+        align-items: center;
+    
+        .projectWriteUp { 
+            margin-left: 3%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .skillButton { 
+                display: flex;
+                p { 
+                    border: solid 1.5px $yellowColour;
+                    padding: 1.5%;
+                    margin: 1%;
+                }
+
+
+            }
+        }
     }
 }
 
-
-
 .contactMe { 
-    height: 60vh; 
+    height: 75vh; 
     background-color: $primaryColour;
+    h4 { 
+        text-align: center;
+        font-family: $primaryFont;
+        color: white;
+        font-size: 2rem;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        text-decoration: underline;
+        text-decoration-color: #f8b400; 
+        text-underline-offset: 10px;
+        margin-bottom: 2vh;
+        margin-top: 0;
+    }
+    p { 
+        text-align: center;
+        color: white;
+        font-family: $primaryFont;
+    }
+    form { 
+        display: flex;
+        flex-direction: column;
+        background-color: $creamColour;
+        border-radius: 10px;
+        margin-top: 3%;
+        padding: 3%;
+        input, 
+        textarea { 
+            padding: 1%;
+            margin: 5px;
+            border: none;
+            border-radius: 2px;
+            color: grey;
+        }
+        input:focus, 
+        textarea:focus { 
+            outline: none;
+            border: solid 1.5px $secondaryColour;
+        }
+        textarea { 
+            resize: none;
+        }
+    }
 }
 
 
@@ -184,11 +267,6 @@ header {
             font-size: 1rem;
         }
     }
-    // .portfolio{ 
-    //     // img { 
-    //     //     flex-direction: column;
-    //     // }
-    // }
 }
 
 // @media (max-width: 500px) and (min-width: 800px){
