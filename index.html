@@ -6,12 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lauren Ratcliffe | Web Developer</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <script defer src="./app.js"></script>
     <script src="https://kit.fontawesome.com/47180d0ef4.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="backgroundParticles">
+        <span class="particle particle-1"></span>
+        <span class="particle particle-2"></span>
+        <span class="particle particle-3"></span>
+        <span class="particle particle-4"></span>
+        <span class="particle particle-5"></span>
+        <span class="particle particle-6"></span>
+        <span class="particle particle-7"></span>
+        <span class="particle particle-8"></span>
+        <span class="particle particle-9"></span>
+        <span class="particle particle-10"></span>
+        <span class="particle particle-11"></span>
+        <span class="particle particle-12"></span>
+    </div>
+
     <nav> 
         <p>LR</p> 
         <div class="navButtons">
@@ -21,30 +37,81 @@
         </div>     
     </nav>
 
-    <Header id="home">
-        <h1>LAUREN RATCLIFFE</h1> 
-        <h2>Front-End Web Developer</h2>
-    </Header>
-
-    <section class="aboutMe wrapper" id="about">
-        <h3> ABOUT ME</h3>
-        <div class="aboutMeText">
-            <p>Hi there! 👋🏻 <br> 
-            I'm Lauren!</p>
-            <p> I started out my career working as an insurance Claim Specialist where I handled various financial lines claims in the areas of Employment Law, Errors & Ommissions, Crime and Cyber. As great as it was to work in that industry, I knew that there was something missing.<br/><br/>
-
-                I've always had an interest in a variety of creative pursuits, and was craving that creativity in my work life. This is what brought me to Juno College! From the moment I printed my first "Hello World" on the page, I was hooked. (...)<br/><br/>
-
-                I have a good eye for colour (and love working with it), and ensure all my designs and builds are crafted with a careful eye. <br/><br/>
-                
-                In my free time, I love being outdoors and going on hikes, as well as diving into a good book. I also enjoy listening to sociology or true crime podcasts, or working on creating new coding projects! <br/><br/>
-                
-                Overall, I'm someone who is always looking to learn and grow, both personally and professionally. I believe in the importance of connecting with others and using my skills to make a positive impact in the world.<br/><br/>
-                
-                I'm always eager to meet new people and explore new opportunities.
-                </p>
+    <header id="home">
+        <h1>Hi there, I'm <span>Lauren!</span></h1> 
+        <h2>I'm a front-end web developer.</h2>
+        <a href="#project"><i class="fa-solid fa-angle-down fa-2x"></i></a>
+    </header>
+    <section class="portfolio wrapper" id="project">
+        <a href="#home"><i class="fa-solid fa-angle-up fa-2x"></i></a>
+        <h3>CHECK OUT MY RECENT WORK!</h3>
+        <!-- <p>Click on any project to read more</p> -->
+        <div class="project">
+            <img src="./assets/pronia.png"> 
+            <div class="projectWriteUp overlay">
+                <h2>Pronia E-Commerce Store</h2>
+                <p>This was a PSD project conversion. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi eos aspernatur doloremque error dolores quas architecto unde hic optio porro!</p>
+                <div class="skillButton">
+                    <p>HTML</p>
+                    <p>CSS</p>
+                </div>
+                <div class="linkButton">
+                    <a>View Live</a>
+                    <a>View Code</a>
+                </div>
+            </div>
         </div>
-        
+        <div class="project">
+            
+            <div class="projectWriteUp overlay">
+                <h2>Project 2</h2>
+                <p>This was a PSD project conversion. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi eos aspernatur doloremque error dolores quas architecto unde hic optio porro!</p>
+                <div class="skillButton">
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>Javascript</p>
+                </div>
+                <div class="linkButton">
+                    <a>View Live</a>
+                    <a>View Code</a>
+                </div>
+            </div> 
+            <img src="./assets/coming-soon.png">
+        </div>
+        <div class="project">
+            <img src="./assets/coming-soon.png">
+            <div class="projectWriteUp overlay">
+                <h2>Project 3</h2>
+                <p>This was a PSD project conversion. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi eos aspernatur doloremque error dolores quas architecto unde hic optio porro!</p>
+                <div class="skillButton">
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>Javascript</p>
+                    <p>React</p>
+                </div>
+                <div class="linkButton">
+                    <a>View Live</a>
+                    <a>View Code</a>
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <div class="projectWriteUp overlay">
+                <h2>Project 4</h2>
+                <p>This was a PSD project conversion. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi eos aspernatur doloremque error dolores quas architecto unde hic optio porro!</p>
+                <div class="skillButton">
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>Javascript</p>
+                    <p>React</p>
+                </div>
+                <div class="linkButton">
+                    <a>View Live</a>
+                    <a>View Code</a>
+                </div>
+            </div>
+            <img src="./assets/coming-soon.png">
+        </div>
     </section>
 
     <section class="codingSkills">
@@ -59,62 +126,29 @@
         </div>
     </section>
 
+    <section class="aboutMe wrapper" id="about">
+        <h3> Hi there! 👋🏻 <br> 
+             I'm Lauren!</h3>
+        <p> I started out my career working as an insurance Claim Specialist where I handled various financial lines claims in the areas of Employment Law, Errors & Ommissions, Crime and Cyber. As great as it was to work in that industry, I knew that there was something missing.<br/><br/>
 
-    <section class="portfolio wrapper">
-        <h3>CHECK OUT MY RECENT WORK!</h3>
-        <div class="project">
-            <img src="./assets/pronia.png"> 
-            <div class="projectWriteUp overlay">
-                <h2>Pronia E-Commerce Store</h2>
-                <p>This was a PSD project conversion. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi eos aspernatur doloremque error dolores quas architecto unde hic optio porro!</p>
-                <div class="skillButton">
-                    <p>HTML</p>
-                    <p>CSS</p>
-                </div>
-            </div>
-        </div>
-        <div class="project">
-            <img src="./assets/coming-soon.png">
-            <div class="projectWriteUp overlay">
-                <h2>Project 2</h2>
-                <p>This was a PSD project conversion. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi eos aspernatur doloremque error dolores quas architecto unde hic optio porro!</p>
-                <div class="skillButton">
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>Javascript</p>
-                </div>
-            </div> 
-        </div>
-        <div class="project">
-            <img src="./assets/coming-soon.png">
-            <div class="projectWriteUp overlay">
-                <h2>Project 3</h2>
-                <p>This was a PSD project conversion. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi eos aspernatur doloremque error dolores quas architecto unde hic optio porro!</p>
-                <div class="skillButton">
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>Javascript</p>
-                    <p>React</p>
-                </div>
-            </div>
-        </div>
-        <div class="project">
-            <img src="./assets/coming-soon.png">
-            <div class="projectWriteUp overlay">
-                <h2>Project 4</h2>
-                <p>This was a PSD project conversion. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi eos aspernatur doloremque error dolores quas architecto unde hic optio porro!</p>
-                <div class="skillButton">
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>Javascript</p>
-                    <p>React</p>
-                </div>
-            </div>
-        </div>
+            I've always had an interest in a variety of creative pursuits, and was craving that creativity in my work life. This is what brought me to Juno College! From the moment I printed my first "Hello World" on the page, I was hooked. (...)<br/><br/>
+
+            I have a good eye for colour (and love working with it), and ensure all my designs and builds are crafted with a careful eye. <br/><br/>
+            
+            In my free time, I love being outdoors and going on hikes, as well as diving into a good book. I also enjoy listening to sociology or true crime podcasts, and am always looking for new recommendations! <br/><br/>
+            
+            Overall, I'm someone who is always looking to learn and grow, both personally and professionally. I believe in the importance of connecting with others and using my skills to make a positive impact in the world.<br/><br/>
+            
+            I'm always eager to meet new people and explore new opportunities, so don't be a stranger!.
+            </p>
+        
+        
     </section>
+
+   
     <footer class="contactMe" id="contact">
         <h4>LET'S CONNECT!</h4>
-        <p class="wrapper">If you have exciting opportunities to discuss or simply want to chat over coffee, feel free to reach out via the form below. Let's make great things happen together!</p>
+        <p class="wrapper">If you have exciting opportunities to discuss or simply want to chat over coffee, feel free to reach out via the form below. Looking forward to connecting!</p>
         <form  class="wrapper" action="" method="" name="">
         
         <label for="name"></label>
@@ -126,6 +160,7 @@
         <label for="feedback"></label>
         <textarea name="emailMessage" id="emailMessage" cols="30" rows="10" minlength="5" maxlength="1000" placeholder="Your Message"></textarea>
 
+        <button>Send Message</button>
         </form>
     </footer>
 </body>
