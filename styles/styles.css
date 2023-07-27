@@ -294,8 +294,10 @@ header i {
 
 .portfolio {
   height: 100%;
-  background-color: rgb(253, 253, 253);
   display: flex;
+  background-color: white;
+  font-family: "Sen", sans-serif;
+  color: #09091c;
   flex-direction: column;
   align-items: center;
   margin-top: 10%;
@@ -310,8 +312,6 @@ header i {
   position: fixed;
 }
 .portfolio h3 {
-  font-family: "Sen", sans-serif;
-  color: #09091c;
   font-size: 2.25rem;
   padding-bottom: 15px;
   border-bottom: solid 2px #f8b400;
@@ -319,14 +319,10 @@ header i {
 }
 .portfolio h2 {
   font-size: 1.75rem;
-  font-family: "Sen", sans-serif;
-  color: #09091c;
   font-style: italic;
 }
 .portfolio p {
   font-size: 1.2rem;
-  font-family: "Sen", sans-serif;
-  color: #09091c;
   font-style: italic;
 }
 .portfolio img {
@@ -411,8 +407,8 @@ header i {
 .aboutMe img {
   max-width: 50vw;
   max-height: 50vh;
+  border-top-color: blue;
   border-radius: 50%;
-  border: solid 5px #CBA0B2;
   margin-right: 5vw;
 }
 .aboutMe h3 {
@@ -588,34 +584,18 @@ header i {
     flex-direction: row;
     margin: 2%;
   }
-  .dialogBox {
+  .aboutMe {
     display: flex;
     flex-direction: column;
-    flex-direction: column;
-    align-items: center;
-    max-height: 25vh;
-    max-width: 25vw;
-    background-color: #f8b400;
-    border: solid 5px #09091c;
-    border-radius: 15px;
-    z-index: 3;
+    margin: 1%;
+    text-align: left;
   }
-  .dialogBox h3 {
-    z-index: 4;
-    text-align: center;
-    font-family: "Short Stack", cursive;
-    color: #09091c;
+  .aboutMe .dialog .dialogBox {
+    min-width: 50vw;
   }
-  .dialogBox .dialogPoint {
-    width: 30px;
-    height: 30px;
-    position: relative;
-    top: 2vh;
-    z-index: 2;
-    border-left: solid 5px #09091c;
-    border-bottom: solid 5px #09091c;
-    background-color: #f8b400;
-    transform: rotate(0.88turn);
+  .aboutMe .dialog .dialogBox h3 {
+    font-size: 1.5rem;
+    padding: none;
   }
 }
 @media all and (min-width: 10em) and (max-width: 50em) {

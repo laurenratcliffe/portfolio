@@ -90,8 +90,12 @@ header {
 
 .portfolio  { 
     height: 100%;
-    background-color: rgb(253, 253, 253);
     display: flex;
+    background-color: white;
+    
+    font-family: $primaryFont;
+    color: $primaryColour;
+
     flex-direction: column;
     align-items: center;
     margin-top: 10%;
@@ -107,8 +111,7 @@ header {
         
     }
     h3{
-        font-family: $primaryFont;
-        color: $primaryColour;
+        
         font-size: 2.25rem;
         padding-bottom: 15px;
         border-bottom: solid 2px $yellowColour;
@@ -116,14 +119,10 @@ header {
     }
     h2 { 
         font-size: 1.75rem;
-        font-family: $primaryFont;
-        color: $primaryColour;
         font-style: italic;
     }
     p { 
         font-size: 1.2rem;
-        font-family: $primaryFont;
-        color: $primaryColour;
         font-style: italic;
     }
     img {
@@ -214,8 +213,9 @@ header {
     img{ 
         max-width: 50vw;
         max-height: 50vh;
+        border-top-color: blue;
         border-radius: 50%;
-        border: solid 5px #CBA0B2;
+        // border: solid 5px #CBA0B2;
         margin-right: 5vw;
     }
     h3 { 
@@ -415,36 +415,50 @@ header {
         flex-direction: row;
         margin: 2%;
     }
-
-    .dialogBox{
+    .aboutMe{ 
         display: flex;
         flex-direction: column;
-        flex-direction: column;
-        align-items: center;
-        max-height: 25vh;
-        max-width: 25vw; 
-        background-color: $yellowColour;
-        border: solid 5px $primaryColour;
-        border-radius: 15px;
-        z-index: 3;
-        h3 { 
-            z-index: 4;
-            text-align: center;
-            font-family: 'Short Stack', cursive;
-            color: $primaryColour;
-        }
-        .dialogPoint{
-            width: 30px; 
-            height: 30px; 
-            position: relative;
-            top: 2vh;
-            z-index: 2;
-            border-left: solid 5px $primaryColour;
-            border-bottom: solid 5px $primaryColour;
-            background-color: $yellowColour;
-            transform: rotate(0.88turn);
+        margin: 1%;
+        text-align: left;
+        .dialog { 
+            .dialogBox{ 
+                min-width: 50vw;
+                h3 { 
+                    font-size: 1.5rem;
+                    padding: none;
+                }
+            }
         }
     }
+    // .dialogBox{
+    //     display: flex;
+    //     flex-direction: column;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     max-height: 25vh;
+    //     max-width: 25vw; 
+    //     background-color: $yellowColour;
+    //     border: solid 5px $primaryColour;
+    //     border-radius: 15px;
+    //     z-index: 3;
+    //     h3 { 
+    //         z-index: 4;
+    //         text-align: center;
+    //         font-family: $primaryFont;
+    //         color: $primaryColour;
+    //     }
+    //     .dialogPoint{
+    //         width: 30px; 
+    //         height: 30px; 
+    //         position: relative;
+    //         top: 2vh;
+    //         z-index: 2;
+    //         border-left: solid 5px $primaryColour;
+    //         border-bottom: solid 5px $primaryColour;
+    //         background-color: $yellowColour;
+    //         transform: rotate(0.88turn);
+    //     }
+    // }
 }
 
 @media all and (min-width: 10em) and (max-width: 50em){
