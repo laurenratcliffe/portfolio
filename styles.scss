@@ -7,8 +7,8 @@ html { box-sizing: border-box;}
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 $primaryFont:'Sen', sans-serif;
-// $primaryColour: #09091c;
-$primaryColour: #032632;
+$primaryColour: #09091c;
+// $primaryColour: #032632;
 $secondaryColour:#2c786c;
 $yellowColour: #f8b400;
 $creamColour: rgb(250, 245, 228);
@@ -93,24 +93,64 @@ header {
     min-height: 50vh;
     font-family: $primaryFont;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     flex: 2 2 20em;
     height: 80vh;
     display: flex;
     text-align: justify;
+
+    .dialog{ 
+        // height: 20vh;
+        // width: 25vw;
+        .dialogBox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-height: 25vh;
+            max-width: 25vw; 
+            background-color: $yellowColour;
+            border-radius: 15px;
+            .dialogPoint{
+                width: 0; 
+                height: 0; 
+                position: relative;
+                bottom: 8vh;
+                border-top: 60px solid transparent;
+                border-bottom: 60px solid transparent;
+                border-left: 60px solid $yellowColour;
+            }
+        }
+    }
+
+
+    .aboutImageAndText { 
+        display: flex; 
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    img{ 
+        max-width: 50vw;
+        max-height: 50vh;
+        border-radius: 50%;
+        border: solid 10px #CBA0B2;
+        margin-right: 5vw;
+    }
     h3 { 
-        font-size: 2rem;
+        font-size: 2.5rem;
+        text-align: center;
         color: $primaryColour;
+        padding: 15px;
     }
     .aboutMeText{
         
     p {
-        font-size: 1rem;
+        font-size: 1.25rem;
         padding-right: 2.5%;
         padding-left: 2.5%; 
         color: $primaryColour;
+        margin-left: 5vw;
     }
 }
 }
@@ -139,53 +179,66 @@ header {
         margin-bottom: 2vh;
         margin-top: 0;
     }
+    .iconsContainer{ 
+        width: 100%;
+        overflow: hidden;
+        
+        .icons { 
+            padding: 2%;
+            animation: scroll 10s linear infinite; 
+            margin: 5%;
+            display: flex;
+            text-align: center;
+            font-family: $primaryFont;
+        }
 
-    .icons { 
-        display: flex; 
-        flex-direction: row;
-        margin: 5%;
+        .fa-brands, 
+        .fa-solid { 
+            padding-left: 3vw;
+            padding-right: 2vw;
+        }
+        .fa-html5:hover { 
+            color: #FF5C29;
+        }  
+        
+        .fa-css3-alt:hover{ 
+            color: #345bf5;
+        } 
+        .fa-sass:hover { 
+            color: #CF6C9C;
+        } 
+        .fa-square-js:hover { 
+            color: #FFE008;
+        } 
+        .fa-react:hover { 
+            color: #08DAFF;
+        }
+        .fa-square-github:hover { 
+            color: #b2b4bd;
+        }
+
+        .fa-fire:hover { 
+            color:#f8b400;
+        }
+        .fa-user-group:hover { 
+            color: #9e9eee;
+        }
+        icons i:hover { 
+            transform:scale(1.3);
+        }
     }
-    .fa-html5:hover { 
-        color: #FF5C29;
-    }  
     
-    .fa-css3-alt:hover{ 
-        color: #345bf5;
-    } 
-    .fa-sass:hover { 
-        color: #CF6C9C;
-    } 
-    .fa-square-js:hover { 
-        color: #FFE008;
-    } 
-    .fa-react:hover { 
-        color: #08DAFF;
-    }
-    .fa-square-github:hover { 
-        color: #1E1C1C;
-    }
-
-    .fa-html5:hover, 
-    .fa-css3-alt:hover, 
-    .fa-sass:hover,
-    .fa-square-js:hover, 
-    .fa-react:hover,
-    .fa-square-github:hover { 
-        transform:scale(1.3);
-    }
-
-    .fa-html5, 
-    .fa-css3-alt, 
-    .fa-sass,
-    .fa-square-js, 
-    .fa-react,
-    .fa-square-github { 
-        padding-left: 2vw;
-        padding-right: 2vw;
-        padding: 2%;
-    }
 }
 
+// @keyframes scroll {
+//     0% {
+//         transform: translateX(-100%);
+//     }
+//     100% {
+    
+//         transform: translateX(0);
+//     }
+// }
 
 
 .portfolio  { 
@@ -265,6 +318,10 @@ header {
 .contactMe { 
     min-height: 85vh; 
     background-color: $primaryColour;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     h4 { 
         text-align: center;
         font-family: $primaryFont;
@@ -287,16 +344,22 @@ header {
     form { 
         display: flex;
         flex-direction: column;
-        background-color: $creamColour;
+        justify-content: center;
+        width: 70%;
+        background: none;
         border-radius: 10px;
         margin-top: 3%;
         padding: 3%;
+        font-family: $primaryFont;
+        color: white;
+        font-size: 1.25rem;
         input, 
         textarea { 
             padding: 1%;
             margin: 5px;
             border: none;
-            border-radius: 2px;
+            border-radius: 5px;
+            background-color: white;
             color: grey;
         }
         input:focus, 
@@ -307,8 +370,29 @@ header {
         textarea { 
             resize: none;
         }
+        .nameAndEmail { 
+            width: 48%;
+            display: flex;
+            flex-direction: row;
+            .name{ 
+                display: flex;
+                flex-direction: column;
+                min-width: 30vw;
+            }
+            .email { 
+                display: flex; 
+                flex-direction: column;
+                min-width: 33vw;
+            }
+        }
         button { 
-            background-color: $secondaryColour;
+            background: none;
+            color: white;
+            border: solid 3px $yellowColour;
+            border-radius: 5px;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            margin-top: 2%;
         }
     }
     
@@ -338,13 +422,13 @@ header {
 
 
     .aboutMe { 
-        height: 150vh;
+        min-height: 150vh;
         font-family: $primaryFont;
         display: flex;
         flex-direction: column;
         margin: 0;
         align-items: center;
-        
+       
         h3 { 
             font-size: 1.5rem;
             color: $primaryColour;

@@ -18,6 +18,7 @@
         <p>LR</p> 
         <div class="navButtons">
             <a href="#home">HOME</a>
+            <a href="#skills">SKILLS</a>
             <a href="#about">ABOUT</a>
             <a href="#contact">CONTACT ME</a>
         </div>     
@@ -100,33 +101,74 @@
         </div>
     </section>
 
-    <section class="codingSkills">
+    <section class="codingSkills" id="skills">
         <h3>MY TOOLKIT</h3>
-        <div class="icons">
-            <i class="fa-brands fa-html5 fa-5x"></i>
-            <i class="fa-brands fa-css3-alt fa-5x"></i>
-            <i class="fa-brands fa-sass fa-5x" ></i>
-            <i class="fa-brands fa-square-js fa-5x" ></i>
-            <i class="fa-brands fa-react fa-5x"></i>
-            <i class="fa-brands fa-square-github fa-5x"></i>
+        <div class="iconsContainer">
+            <div class="icons">
+                <div>
+                    <i class="fa-brands fa-html5 fa-5x"></i>
+                    <p>HTML</p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-css3-alt fa-5x"></i>
+                    <p>CSS</p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-sass fa-5x" ></i>
+                    <p>SASS</p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-square-js fa-5x" ></i>
+                    <p>JAVASCRIPT</p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-react fa-5x"></i>
+                    <p>REACT</p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-square-github fa-5x"></i>
+                    <p>GIT</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-fire fa-5x"></i>
+                    <p>FIREBASE</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-user-group fa-5x"></i>
+                    <p>PAIRED <br/> PROGRAMMING</p>
+                </div>
+            </div>  
         </div>
     </section>
 
     <section class="aboutMe wrapper" id="about">
-        <h3> Hi there! 👋🏻 <br> 
-             I'm Lauren!</h3>
-        <p> I started out my career working as an insurance Claim Specialist where I handled various financial lines claims in the areas of Employment Law, Errors & Ommissions, Crime and Cyber. As great as it was to work in that industry, I knew that there was something missing.<br/><br/>
+            <div class="aboutImageAndText">
+                <div>
+                    <img src="./assets/Ratcliffe.jpg" alt="Picture of myself in a funky lavender bucket hat">
+                </div>
+                <div class="dialog">
+                    <div class="dialogBox">
+                        <h3> Let me introduce <br/>myself 👋🏻 <br> 
+                            </h3>
+                        <div class="dialogPoint"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutMeText">
+                <p> I started out my career working as an insurance Claim Specialist where I handled various financial lines claims in the areas of Employment Law, Errors & Ommissions, Crime and Cyber. As great as it was to work in that industry, I knew that there was something missing.<br/><br/>
 
-            I've always had an interest in a variety of creative pursuits, and was craving that creativity in my work life. This is what brought me to Juno College! From the moment I printed my first "Hello World" on the page, I was hooked. (...)<br/><br/>
-
-            I have a good eye for colour (and love working with it), and ensure all my designs and builds are crafted with a careful eye. <br/><br/>
+                    I've always had an interest in a variety of creative pursuits, and was craving that creativity in my work life. This is what brought me to Juno College! From the moment I printed my first "Hello World" on the page, I was hooked. (...)<br/><br/>
+        
+                    I have a good eye for colour (and love working with it), and ensure all my designs and builds are crafted with a careful eye. <br/><br/>
+                    
+                    I'm always on the lookout for funky hats to try on 👒 As you can see, I'm rocking this lavender quilted bucket hat (we'll call this a soft skill).<br/><br/>
+        
+                    In my free time, I love being outdoors and going on hikes, as well as diving into a good book. I also enjoy listening to sociology or true crime podcasts, and am always looking for new recommendations! <br/><br/>
+                    
+                    I'm always eager to meet new people and explore new opportunities, so don't be a stranger!
+                    </p>
+             </div>
             
-            In my free time, I love being outdoors and going on hikes, as well as diving into a good book. I also enjoy listening to sociology or true crime podcasts, and am always looking for new recommendations! <br/><br/>
-            
-            Overall, I'm someone who is always looking to learn and grow, both personally and professionally. I believe in the importance of connecting with others and using my skills to make a positive impact in the world.<br/><br/>
-            
-            I'm always eager to meet new people and explore new opportunities, so don't be a stranger!.
-            </p>
         
         
     </section>
@@ -137,14 +179,24 @@
         <p class="wrapper">If you have exciting opportunities to discuss or simply want to chat over coffee, feel free to reach out via the form below. Looking forward to connecting!</p>
         <form  class="wrapper" action="" method="" name="">
         
-        <label for="name"></label>
-        <input type="text" name="name" required="true" placeholder="Your Name">
+        <div class="nameAndEmail">
+            <div class="name">
+                <label for="name">YOUR NAME</label>
+                <input type="text" name="name" id="name" required="true"> 
+            </div>
+            
+            <div class="email">
+                <label for="email">YOUR EMAIL</label>
+                <input type="text" name="email" id="email" required="true">
+            </div>
+            
+        </div>
+        
+        <label for="subject">SUBJECT LINE</label>
+        <input type="text" name="email" id="subject" required="true">
 
-        <label for="email"></label>
-        <input type="text" name="email" required="true" placeholder="Your Email">
-
-        <label for="feedback"></label>
-        <textarea name="emailMessage" id="emailMessage" cols="30" rows="10" minlength="5" maxlength="1000" placeholder="Your Message"></textarea>
+        <label for="feedback">MESSAGE</label>
+        <textarea name="emailMessage" id="emailMessage" cols="30" rows="10" minlength="5" maxlength="1000"></textarea>
 
         <button>Send Message</button>
         </form>
