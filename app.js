@@ -38,6 +38,7 @@ const typeWriter = () => {
     ];
 
     const typewriter = document.getElementById("typewriter");
+    const cursor = document.querySelector(".cursor");
     const speed = 70; 
     const deleteSpeed = 50; 
     const delayAfterTyping = 1300; 
@@ -52,6 +53,7 @@ const typeWriter = () => {
         index++;
         setTimeout(type, speed);
         } else {
+            cursor.style.display = "inline";
             setTimeout(deleteText, delayAfterTyping);
         }
     };
@@ -65,6 +67,7 @@ const typeWriter = () => {
             j--;
             if (j < 0) {
             clearInterval(deleteInterval);
+            cursor.style.display = "inline";
             setTimeout(nextPhrase, delayAfterDeleting);
         }
     }, deleteSpeed);
@@ -77,10 +80,10 @@ const typeWriter = () => {
     }
     index = 0;
     typewriter.innerHTML = "";
-
+    cursor.style.display = "inline";
     type();
     };
-
+    typewriter.innerHTML = "";
     type();
 };
 

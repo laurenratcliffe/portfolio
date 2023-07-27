@@ -86,6 +86,21 @@ header {
         top: 90vh;
         align-self: center;
     }
+
+
+    .cursor {
+        animation: blink 0.7s infinite;
+        color: white;
+      }
+      
+    @keyframes blink {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    }
 }
 
 .portfolio  { 
