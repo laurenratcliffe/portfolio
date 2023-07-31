@@ -384,41 +384,11 @@ header .cursor {
   text-align: justify;
   z-index: 1;
 }
-.aboutMe .dialog {
-  display: flex;
-}
-.aboutMe .dialog .dialogBox {
-  display: flex;
-  flex-direction: column;
-  flex-direction: column;
-  align-items: center;
-  max-height: 25vh;
-  max-width: 25vw;
-  background-color: #f8b400;
-  border: solid 5px #09091c;
-  border-radius: 15px;
-  z-index: 3;
-}
-.aboutMe .dialog .dialogBox h3 {
-  z-index: 4;
-  text-align: center;
-  color: #09091c;
-}
-.aboutMe .dialog .dialogBox .dialogPoint {
-  width: 30px;
-  height: 30px;
-  position: relative;
-  top: 2vh;
-  z-index: 2;
-  border-left: solid 5px #09091c;
-  border-bottom: solid 5px #09091c;
-  background-color: #f8b400;
-  transform: rotate(0.88turn);
-}
 .aboutMe .aboutImageAndText {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  justify-content: center;
 }
 .aboutMe img {
   max-width: 50vw;
@@ -428,9 +398,10 @@ header .cursor {
   margin-right: 5vw;
 }
 .aboutMe h3 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   text-align: center;
-  color: #09091c;
+  color: #f8b400;
+  text-shadow: 3px 3px #09091c;
   padding: 15px;
 }
 .aboutMe .aboutMeText p {

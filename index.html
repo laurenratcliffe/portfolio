@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
 
@@ -162,8 +163,7 @@
                 </div>
                 <div class="dialog">
                     <div class="dialogBox">
-                        <h3> LET ME INTRODUCE <br/>MYSELF 👋🏻 <br> 
-                            </h3>
+                        <h3 id="simpleArcText"> LET ME INTRODUCE MYSELF 👋🏻</h3>
                         <div class="dialogPoint"></div>
                     </div>
                 </div>
@@ -214,5 +214,9 @@
         <button>Send Message</button>
         </form>
     </footer>
+
+    <script>
+        $('#simpleArcText').circleType({radius:135});
+    </script>
 </body>
 </html>
