@@ -6,7 +6,8 @@ html { box-sizing: border-box;}
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-$primaryFont:'Sen', sans-serif;
+// $primaryFont:'Sen', sans-serif;
+$primaryFont: 'Poppins', sans-serif;
 $primaryColour: #09091c;
 // $primaryColour: #032632;
 $secondaryColour:#2c786c;
@@ -26,7 +27,8 @@ nav {
     height: 5vh; 
     background-color: $primaryColour;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    align-items: center;
     font-family: $primaryFont;
     font-weight: 200;
     color: white;
@@ -53,6 +55,13 @@ nav {
         padding-right: 5px;
         }
     } 
+    .logo { 
+        position: absolute;
+        top: 0; 
+        left: 0;
+        max-width: 2vw;
+        max-height: 2vh;
+    }
 }
 
 header { 
@@ -68,14 +77,31 @@ header {
     span { 
         color: $yellowColour;
     }
+    
+    p {
+        position: absolute;
+        font-size: 1000px;
+        width: 100vw;
+        font-weight: 800;
+        z-index: 1;
+        opacity: 5%;
+        color: white;
+        white-space: initial;
+        text-align: center;
+    }
+
     h1{ 
         font-size: 4rem;
         font-weight: 400;
-        font-weight: 200;
+        font-weight: 800;
+        z-index: 100;
+        letter-spacing: 0.075em;
+        
     }
     h2 { 
         font-size: 2rem;
-        font-weight: 200;
+        font-weight: 400;
+        z-index: 100
     }
     i { 
         color: $yellowColour;
@@ -84,9 +110,8 @@ header {
         padding: 0.5% 1% 0.5% 1%;
         position: absolute;
         top: 90vh;
-        align-self: center;
+        
     }
-
 
     .cursor {
         animation: blink 0.7s infinite;
@@ -104,14 +129,13 @@ header {
 }
 
 .portfolio  { 
-    // height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: white;
     font-family: $primaryFont;
     color: $primaryColour;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 10%;
     flex: 1 1 ;
 
@@ -131,8 +155,7 @@ header {
     }
 
     h3{
-        
-        font-size: 2.25rem;
+        font-size: 2.75rem;
         padding-bottom: 10px;
         border-bottom: solid 2px $yellowColour;
         border-width: 2px;
@@ -155,6 +178,11 @@ header {
     }
     .project {
         margin: 3%;
+        transition: transform 0.2s ease, opacity 0.5s ease, z-index 0.5s ease;
+        transform: scale(1);
+        opacity: 0;
+        z-index: 0;
+
         .projectWriteUp { 
             margin-left: 3%;
             display: flex;
@@ -174,10 +202,34 @@ header {
 
         .linkButtons { 
             margin-top: 1vh;
+            a { 
+                cursor: pointer;
+            }
         }
         }
     }
 }
+
+.project.in-view {
+    transform: scale(1.05);
+    opacity: 1;
+    z-index: 1;
+}
+
+// Animate the projects when they become visible
+@keyframes project-appear {
+    from {
+        transform: scale(1);
+        opacity: 0;
+        z-index: 0;
+    }
+    to {
+        transform: scale(1.05);
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
 
 .aboutMe { 
     margin: 10%;
@@ -191,37 +243,6 @@ header {
     display: flex;
     text-align: justify;
     z-index: 1;
-    // .dialog{ 
-    //     display: flex;
-    //     .dialogBox{
-    //         display: flex;
-    //         flex-direction: column;
-    //         flex-direction: column;
-    //         align-items: center;
-    //         max-height: 25vh;
-    //         max-width: 25vw; 
-    //         background-color: $yellowColour;
-    //         border: solid 5px $primaryColour;
-    //         border-radius: 15px;
-    //         z-index: 3;
-    //         h3 { 
-    //             z-index: 4;
-    //             text-align: center;
-    //             color: $primaryColour;
-    //         }
-    //         .dialogPoint{
-    //             width: 30px; 
-    //             height: 30px; 
-    //             position: relative;
-    //             top: 2vh;
-    //             z-index: 2;
-    //             border-left: solid 5px $primaryColour;
-    //             border-bottom: solid 5px $primaryColour;
-    //             background-color: $yellowColour;
-    //             transform: rotate(0.88turn);
-    //         }
-    //     }
-    // }
 
 
     .aboutImageAndText { 
@@ -231,11 +252,8 @@ header {
         justify-content: center
     }
     img{ 
-        max-width: 50vw;
-        max-height: 50vh;
-        border-top-color: blue;
-        border-radius: 50%;
-        // border: solid 5px #CBA0B2;
+        max-width: 30vw;
+        max-height: auto;
         margin-right: 5vw;
     }
     h3 { 

@@ -26,8 +26,7 @@ figure {
 }
 
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   height: 0;
   overflow: visible;
 }
@@ -140,8 +139,7 @@ fieldset {
 }
 
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
@@ -159,8 +157,7 @@ textarea {
 }
 
 [type=checkbox], [type=radio] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
 }
 
@@ -203,13 +200,11 @@ template {
 }
 
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 .sr-only {
@@ -238,16 +233,9 @@ html {
 nav {
   height: 5vh;
   background-color: #09091c;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: "Poppins", sans-serif;
+  justify-content: space-between;
+  font-family: "Sen", sans-serif;
   font-weight: 200;
   color: white;
 }
@@ -266,67 +254,35 @@ nav a:hover {
 }
 nav .navButtons {
   margin-right: 2vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 nav .navButtons p {
   padding-left: 5px;
   padding-right: 5px;
 }
-nav .logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  max-width: 2vw;
-  max-height: 2vh;
-}
 
 header {
   height: 95vh;
   background-color: #09091c;
-  font-family: "Poppins", sans-serif;
+  font-family: "Sen", sans-serif;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   line-height: 0;
 }
 header span {
   color: #f8b400;
 }
-header p {
-  position: absolute;
-  font-size: 1000px;
-  width: 100vw;
-  font-weight: 800;
-  z-index: 1;
-  opacity: 5%;
-  color: white;
-  white-space: initial;
-  text-align: center;
-}
 header h1 {
   font-size: 4rem;
   font-weight: 400;
-  font-weight: 800;
-  z-index: 100;
-  letter-spacing: 0.075em;
+  font-weight: 200;
 }
 header h2 {
   font-size: 2rem;
-  font-weight: 400;
-  z-index: 100;
+  font-weight: 200;
 }
 header i {
   color: #f8b400;
@@ -335,19 +291,11 @@ header i {
   padding: 0.5% 1% 0.5% 1%;
   position: absolute;
   top: 90vh;
+  align-self: center;
 }
 header .cursor {
-  -webkit-animation: blink 0.7s infinite;
-          animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
   color: white;
-}
-@-webkit-keyframes blink {
-  0%, 100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
 }
 @keyframes blink {
   0%, 100% {
@@ -359,24 +307,15 @@ header .cursor {
 }
 
 .portfolio {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   background-color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Sen", sans-serif;
   color: #09091c;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-bottom: 10%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1;
-          flex: 1 1;
+  flex: 1 1;
 }
 .portfolio a {
   text-decoration: none;
@@ -391,7 +330,7 @@ header .cursor {
   border: solid 1px #09091c;
 }
 .portfolio h3 {
-  font-size: 2.75rem;
+  font-size: 2.25rem;
   padding-bottom: 10px;
   border-bottom: solid 2px #f8b400;
   border-width: 2px;
@@ -413,41 +352,22 @@ header .cursor {
 }
 .portfolio .project {
   margin: 3%;
-  -webkit-transition: opacity 0.5s ease, z-index 0.5s ease, -webkit-transform 0.2s ease;
-  transition: opacity 0.5s ease, z-index 0.5s ease, -webkit-transform 0.2s ease;
-  transition: transform 0.2s ease, opacity 0.5s ease, z-index 0.5s ease;
-  transition: transform 0.2s ease, opacity 0.5s ease, z-index 0.5s ease, -webkit-transform 0.2s ease;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  opacity: 0;
-  z-index: 0;
 }
 .portfolio .project .projectWriteUp {
   margin-left: 3%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   padding: 1%;
 }
 .portfolio .project .projectWriteUp .skillButton {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .portfolio .project .projectWriteUp .skillButton p {
   border: solid 1.5px #f8b400;
   padding: 1.5%;
-  margin: 1%;
+  margin: 2%;
 }
 .portfolio .project .projectWriteUp .linkButtons {
   margin-top: 1vh;
@@ -456,84 +376,28 @@ header .cursor {
   cursor: pointer;
 }
 
-.project.in-view {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  opacity: 1;
-  z-index: 1;
-}
-
-@-webkit-keyframes project-appear {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 0;
-    z-index: 0;
-  }
-  to {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    opacity: 1;
-    z-index: 1;
-  }
-}
-
-@keyframes project-appear {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 0;
-    z-index: 0;
-  }
-  to {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    opacity: 1;
-    z-index: 1;
-  }
-}
 .aboutMe {
   margin: 10%;
   padding: 5%;
-  font-family: "Poppins", sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  font-family: "Sen", sans-serif;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-flex: 2;
-      -ms-flex: 2 2 20em;
-          flex: 2 2 20em;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 2 2 20em;
   display: flex;
   text-align: justify;
   z-index: 1;
 }
 .aboutMe .aboutImageAndText {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
 }
 .aboutMe img {
   max-width: 30vw;
-  max-height: auto;
+  max-height: 30vh;
   margin-right: 5vw;
 }
 .aboutMe h3 {
@@ -554,35 +418,18 @@ header .cursor {
 .codingSkills {
   color: rgb(255, 255, 255);
   min-height: 30vh;
-  font-family: "Poppins", sans-serif;
+  font-family: "Sen", sans-serif;
   background-color: #09091c;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .codingSkills .icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   margin: 5%;
 }
 .codingSkills h3 {
@@ -600,14 +447,11 @@ header .cursor {
 }
 .codingSkills .iconsContainer .icons {
   padding: 2%;
-  -webkit-animation: scroll 10s linear infinite;
-          animation: scroll 10s linear infinite;
+  animation: scroll 10s linear infinite;
   margin: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Sen", sans-serif;
 }
 .codingSkills .iconsContainer .fa-brands,
 .codingSkills .iconsContainer .fa-solid {
@@ -639,30 +483,20 @@ header .cursor {
   color: #9e9eee;
 }
 .codingSkills .iconsContainer icons i:hover {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 .contactMe {
   min-height: 85vh;
   background-color: #09091c;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .contactMe h4 {
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Sen", sans-serif;
   color: white;
   font-size: 2rem;
   padding-top: 2%;
@@ -677,25 +511,18 @@ header .cursor {
   font-size: 1.25rem;
   text-align: center;
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Sen", sans-serif;
 }
 .contactMe form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   width: 70%;
   background: none;
   border-radius: 10px;
   margin-top: 3%;
   padding: 3%;
-  font-family: "Poppins", sans-serif;
+  font-family: "Sen", sans-serif;
   color: white;
   font-size: 1.25rem;
 }
@@ -718,32 +545,17 @@ header .cursor {
 }
 .contactMe form .nameAndEmail {
   width: 48%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 .contactMe form .nameAndEmail .name {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   min-width: 30vw;
 }
 .contactMe form .nameAndEmail .email {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   min-width: 33vw;
 }
 .contactMe form button {
@@ -758,23 +570,13 @@ header .cursor {
 
 @media all and (min-width: 45em) and (max-width: 70em) {
   .aboutMe {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     margin: 2%;
   }
   .aboutMe {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     margin: 1%;
     text-align: left;
   }
@@ -791,9 +593,7 @@ header .cursor {
     display: none;
   }
   header {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   header h1 {
     line-height: 1;
@@ -807,22 +607,13 @@ header .cursor {
     line-height: 1;
   }
   header button {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .portfolio {
     background-color: rgb(253, 253, 253);
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
   .portfolio h3 {
     font-size: 2rem;
@@ -830,7 +621,7 @@ header .cursor {
   }
   .portfolio p {
     font-size: 1rem;
-    font-family: "Poppins", sans-serif;
+    font-family: "Sen", sans-serif;
   }
   .portfolio img {
     margin: 2%;
@@ -862,7 +653,6 @@ header .cursor {
     opacity: 0;
     padding: 5%;
     border-radius: 10px;
-    -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
     color: white;
     background-color: #09091c;
@@ -878,13 +668,8 @@ header .cursor {
     opacity: 0.98;
   }
   .aboutMe {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     margin: 1%;
     text-align: left;
   }
@@ -895,4 +680,4 @@ header .cursor {
     font-size: 1.5rem;
     padding: none;
   }
-}
+}/*# sourceMappingURL=styles.css.map */

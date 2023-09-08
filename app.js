@@ -1,33 +1,3 @@
-// Add in zoom on scroll for Header 
-// const zoomOnScroll = document.querySelector(".zoom");
-// let zoom = 1;
-// const zoomSpeed = 0.1;
-// document.addEventListener('scroll', function (e) { 
-//     let scrollDirection = e.deltaY > 0 ? "down" : "up";
-//     if (scrollDirection === "down"){ 
-//         zoomOnScroll.style.transform = `scale(${zoom -= zoomSpeed})`;
-//     } else { 
-//         zoomOnScroll.style.transform = `scale(${zoom +=zoomSpeed})`;
-//     }
-//     const minZoom = -1;
-//     const maxZoom = 3; 
-    
-//     if (zoom < minZoom) {
-//         zoom = minZoom;
-//     } else if (zoom > maxZoom) {
-//         zoom = maxZoom;
-//     }
-//     });
-
-    //mobile formatting
-    // if (window.screen.width) <= 600 { 
-    //     const portfolio = document.querySelector(".portfolio");
-    //     portfolio.createElement('p');
-        
-    // };
-
-
-  
 
 
 //typewriter function
@@ -40,8 +10,8 @@ const typeWriter = () => {
 
     const typewriter = document.getElementById("typewriter");
     const cursor = document.querySelector(".cursor");
-    const speed = 70; 
-    const deleteSpeed = 50; 
+    const speed = 90; 
+    const deleteSpeed = 60; 
     const delayAfterTyping = 1300; 
     const delayAfterDeleting = 200; 
     let currentPhraseIndex = 0;
@@ -94,3 +64,34 @@ window.onload = () => {
 };
 
 
+//Scroll animation 
+// document.addEventListener('DOMContentLoaded', function () {
+//     const projects = document.querySelectorAll('.project');
+
+//     window.addEventListener('scroll', function () {
+//         projects.forEach((project) => {
+//             const bounding = project.getBoundingClientRect();
+//             if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
+//                 project.classList.add('in-view');
+//             } 
+//         });
+//     });
+// });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const projects = document.querySelectorAll('.project');
+
+    window.addEventListener('scroll', function () {
+        projects.forEach((project) => {
+            const bounding = project.getBoundingClientRect();
+            if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
+                project.classList.add('in-view');
+                project.style.animation = 'project-appear 0.5s ease forwards'; // Apply the animation
+            }
+            // } else {
+            //     project.classList.remove('in-view');
+            //     project.style.animation = 'none'; // Remove the animation when out of view
+            // }
+        });
+    });
+});
