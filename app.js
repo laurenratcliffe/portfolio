@@ -58,25 +58,10 @@ const typeWriter = () => {
     type();
 };
 
-  // Start the typewriter animation on page load
+  
 window.onload = () => {
     typeWriter();
 };
-
-
-//Scroll animation 
-// document.addEventListener('DOMContentLoaded', function () {
-//     const projects = document.querySelectorAll('.project');
-
-//     window.addEventListener('scroll', function () {
-//         projects.forEach((project) => {
-//             const bounding = project.getBoundingClientRect();
-//             if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
-//                 project.classList.add('in-view');
-//             } 
-//         });
-//     });
-// });
 
 document.addEventListener('DOMContentLoaded', function () {
     const projects = document.querySelectorAll('.project');
@@ -88,10 +73,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 project.classList.add('in-view');
                 project.style.animation = 'project-appear 0.5s ease forwards'; // Apply the animation
             }
-            // } else {
-            //     project.classList.remove('in-view');
-            //     project.style.animation = 'none'; // Remove the animation when out of view
-            // }
+        
         });
     });
+});
+
+
+//mobile overlay toggle on click 
+
+const projectWriteUps = document.querySelectorAll('.projectWriteUp');
+
+
+projectWriteUps.forEach((projectWriteUp) => {
+  projectWriteUp.addEventListener('click', () => {
+    console.log('ive been clicked')
+    projectWriteUp.classList.toggle('show-overlay');
+  });
 });

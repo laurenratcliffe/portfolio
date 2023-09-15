@@ -28,7 +28,7 @@ nav {
     background-color: $primaryColour;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
     font-family: $primaryFont;
     font-weight: 200;
     color: white;
@@ -46,6 +46,7 @@ nav {
         text-underline-offset: 10px;
         margin-bottom: 2vh;
         margin-top: 0;
+        cursor: pointer;
     }
     .navButtons{ 
         margin-right: 2vw;
@@ -59,12 +60,18 @@ nav {
         position: absolute;
         top: 0; 
         left: 0;
-        max-width: 2vw;
-        max-height: 2vh;
+        max-width: 70px;
+        max-height: 70px;
+        margin-left: 1%;
+        margin-top: 10px;
     }
 }
 
 header { 
+    background-image: url(./assets/Lauren.jpg);
+    background-repeat: no-repeat;
+    background-position: cover;
+
     height: 95vh;
     background-color: $primaryColour;
     font-family: $primaryFont;
@@ -164,12 +171,12 @@ header {
         font-size: 1.75rem;
         font-style: italic;
     }
+    
     p { 
         font-size: 1.2rem;
         font-style: italic;
     }
     img {
-        margin: 2%;
         width: 30vw;
         height: 25vh;
         border: solid 2px rgb(9, 9, 28, 0.7);
@@ -195,19 +202,30 @@ header {
                 p { 
                     border: solid 1.5px $yellowColour;
                     padding: 1.5%;
-                    margin: 1%;
+                    margin-right: 1%;
                 }
             }
             
 
         .linkButtons { 
-            margin-top: 1vh;
+            
             a { 
                 cursor: pointer;
             }
         }
         }
+
+        .projectImageLeft { 
+            margin-right: 2vw;
+        }
+        .projectImageRight { 
+            margin-left: 2vw;
+        }
     }
+}
+
+.learnMoreClickText { 
+    display: none;
 }
 
 .project.in-view {
@@ -232,7 +250,8 @@ header {
 
 
 .aboutMe { 
-    margin: 10%;
+    
+    // margin: 10%;
     padding: 5%;
     font-family: $primaryFont;
     display: flex;
@@ -252,9 +271,9 @@ header {
         justify-content: center
     }
     img{ 
-        max-width: 30vw;
+        max-width: 40vw;
         max-height: auto;
-        margin-right: 5vw;
+        
     }
     h3 { 
         font-size: 3.5rem;
@@ -264,11 +283,11 @@ header {
         padding: 15px;
     }
     .aboutMeText{
-        
+    
     p {
         font-size: 1.25rem;
-        padding-right: 2.5%;
-        padding-left: 2.5%; 
+      
+        
         color: $primaryColour;
         margin-left: 5vw;
     }
@@ -424,13 +443,16 @@ header {
             }
         }
         button { 
+            
             background: none;
             color: white;
-            border: solid 3px $yellowColour;
+            border: solid 2px $yellowColour;
             border-radius: 5px;
             padding-top: 1%;
             padding-bottom: 1%;
             margin-top: 2%;
+            margin-right: 15vw;
+            margin-left: 15vw
         }
     }
     
@@ -521,6 +543,14 @@ header {
         padding: 1%;
     }
 
+    .projectWriteUp .overlay {
+        display: none; 
+      }
+      
+      .projectWriteUp.show-overlay .overlay {
+        display: block; 
+      }
+
     .overlay { 
         display: none;
     }
@@ -535,7 +565,7 @@ header {
             font-size: 1rem;
         }
         position: absolute;
-        width: 90vw;
+        width: 82vw;
         height: 40vh;
         opacity: 0;
         padding: 5%;
@@ -567,4 +597,9 @@ header {
         }
     }
 }
+
+.learnMoreClickText { 
+    display: block; 
+}
+
 }

@@ -35,7 +35,7 @@
 
     <header id="home">
         <!-- <h1>Hi there, I'm <span>Lauren!</span></h1>  -->
-        <p>Lau</p>
+        <!-- <p>Lau</p> -->
         <h1> LAUREN RATCLIFFE </h1>
         <h2>I am <span id="typewriter"></span><span class="cursor">|</span></h2>
         <a href="#project"><i class="fa-solid fa-angle-down fa-2x"></i></a>
@@ -43,50 +43,33 @@
     <section class="portfolio wrapper" id="project">
         <!-- <a href="#home"><i class="fa-solid fa-angle-up fa-2x"></i></a> -->
         <h3>CHECK OUT MY RECENT WORK!</h3>
+        <p class="learnMoreClickText">Click on the image to learn more</p>
         <!-- <p>Click on any project to read more</p> -->
         <div class="project">
-            <div class="projectWriteUp">
-                <img id="portfolioImg" src="./assets/pronia.png"> 
+            <div class="projectWriteUp projectImageRight">
                 <div class="overlay">
-                    <h2>Pronia E-Commerce Store</h2>
-                    <p>This was a PSD project conversion. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi eos aspernatur doloremque error dolores quas architecto unde hic optio porro!</p>
-                    <div class="skillButton">
-                        <p>HTML</p>
-                        <p>CSS</p>
-                    </div>
-                    <div class="linkButtons">
-                        <a href="#">View Live</a>
-                        <a href="#">View Code</a>
-                    </div>
-                </div> 
-            </div>
-        </div>
-        
-        <div class="project">
-            <div class="projectWriteUp">
-                <div class="overlay">
-                    <h2>Project 2</h2>
-                    <p>This was a PSD project conversion. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi eos aspernatur doloremque error dolores quas architecto unde hic optio porro!</p>
+                    <h2>StrideCast - Podcast Planner</h2>
+                    <p>Acted as project manager on this group programming React App which was created with seamless user experience in mind - users input the length of their walk and their preferred podcast genre, and are provided with a list of podcasts to listen to or save for later. </p>
                     <div class="skillButton">
                         <p>HTML</p>
                         <p>CSS</p>
                         <p>Javascript</p>
                     </div>
                     <div class="linkButtons">
-                        <a>View Live</a>
-                        <a>View Code</a>
+                        <a href="https://stridecastdevelopment.netlify.app/" target="_blank">View Live</a>
+                        <a href="https://github.com/podcast-planner-project-4/project4/tree/development" target="_blank">View Code</a>
                     </div>
                 </div>
-                <img id="portfolioImg" src="./assets/coming-soon.png">
+                <img class="projectImageRight" id="portfolioImg" src="./assets/StrideCast-photo.png">
             </div> 
         </div>
 
         <div class="project">
-            <div class="projectWriteUp">
-                <img id="portfolioImg" src="./assets/coming-soon.png">
+            <div class="projectWriteUp projectImageLeft">
+                <img class="projectImageLeft" id="portfolioImg" src="./assets/mmm-image.png">
                 <div class="overlay">
-                    <h2>Project 3</h2>
-                    <p>This was a PSD project conversion. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi eos aspernatur doloremque error dolores quas architecto unde hic optio porro!</p>
+                    <h2>Make Me a Meal - Recipe Generator</h2>
+                    <p>Have you ever struggled to think of a healthy meal for your day? Make Me a Meal was created to help with this common struggle. Utilizing dynamic API calls, state management, and multi-filter UI, the app allows the user to find recipes based on dietary restrictions and preferences.</p>
                     <div class="skillButton">
                         <p>HTML</p>
                         <p>CSS</p>
@@ -94,14 +77,34 @@
                         <p>React</p>
                     </div>
                     <div class="linkButtons">
-                        <a>View Live</a>
-                        <a>View Code</a>
+                        <a href="https://deft-biscuit-97ba14.netlify.app/" target="_blank">View Live</a>
+                        <a href="https://github.com/laurenratcliffe/lauren-ratcliffe-project-3" target="_blank">View Code</a>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="project">
+            <div class="projectWriteUp ">
+                <div class="overlay">
+                    <h2>Pronia E-Commerce Store</h2>
+                    <p>This was a PSD project conversion. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi eos aspernatur doloremque error dolores quas architecto unde hic optio porro!</p>
+                    <div class="skillButton">
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>Javascript</p>
+                    </div>
+                    <div class="linkButtons">
+                        <a href="https://main--monumental-chimera-078739.netlify.app" target="_blank">View Live</a>
+                        <a href="https://github.com/laurenratcliffe/project-1" target="_blank">View Code</a>
+                    </div>
+                </div> 
+                <img class="projectImageRight" id="portfolioImg" src="./assets/pronia.png"> 
+            </div>
+        </div>
+        
+        
+
+        <!-- <div class="project">
             <div class="projectWriteUp">
                 <div class="overlay">
                     <h2>Project 4</h2>
@@ -120,7 +123,7 @@
                 <img id="portfolioImg" src="./assets/coming-soon.png"> 
             </div>
             
-        </div>
+        </div> -->
     </section>
 
     <section class="codingSkills" id="skills">
@@ -163,11 +166,11 @@
         </div>
     </section>
 
-    <section class="aboutMe wrapper" id="about">
+    <section class="aboutMe " id="about">
             <div class="aboutImageAndText">
                 <div>
-                    <img src="./assets/Untitled_Artwork.png" alt="Yellow text saying hi there!">
-                    <img src="./assets/Untitled_Artwork 4.png" alt="digital illustration of myself in front of a laptop">
+                    <!-- <img src="./assets/Untitled_Artwork.png" alt="Yellow text saying hi there!"> -->
+                    <img src="./assets/Hi2.png" alt="digital illustration of myself in front of a laptop with text saying hi there">
                 </div>
                 <div class="dialog">
                     <div class="dialogBox">
@@ -221,8 +224,5 @@
         </form>
     </footer>
 
-    <script>
-        $('#simpleArcText').circleType({radius:135});
-    </script>
 </body>
 </html>
