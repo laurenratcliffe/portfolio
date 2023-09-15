@@ -524,11 +524,13 @@ header {
         font-family: $primaryFont;
     }
     img {
-        margin: 2%;
-        width: 90vw;
-        height: 40vh;
-        border-radius: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 130%;
+        height: 100%;
+        border-radius: 10px; 
     }
+    
     a { 
         background-color: white;
         color: $primaryColour;
@@ -542,7 +544,12 @@ header {
     .linkButtons { 
         padding: 1%;
     }
-
+    
+    .projectWriteUp { 
+        .skillButton p { 
+            display: none;
+        }
+    }
     .projectWriteUp .overlay {
         display: none; 
       }
@@ -558,18 +565,20 @@ header {
     .overlay { 
         display: block;
         z-index: 10;
+        
         h2 { 
-            font-size: 2rem;
+            font-size: 0.9rem;
+           
         }
         p { 
-            font-size: 1rem;
+            font-size: 0.75rem;
         }
         position: absolute;
-        width: 82vw;
-        height: 40vh;
+        width: 130%;
+        height: 100%;
         opacity: 0;
         padding: 5%;
-
+        
         border-radius: 10px;
         transition: .5s ease;
         color: white;
@@ -581,7 +590,19 @@ header {
     .project:focus .overlay {
         opacity: 0.98;
     }
+
+    .project { 
+        .projectImageLeft, 
+        .projectImageRight { 
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+       
+    }
 }
+
+
 .aboutMe{ 
     display: flex;
     flex-direction: column;

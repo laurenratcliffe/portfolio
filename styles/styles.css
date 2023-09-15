@@ -843,9 +843,10 @@ header .cursor {
     font-family: "Poppins", sans-serif;
   }
   .portfolio img {
-    margin: 2%;
-    width: 90vw;
-    height: 40vh;
+    margin-left: 0;
+    margin-right: 0;
+    width: 130%;
+    height: 100%;
     border-radius: 10px;
   }
   .portfolio a {
@@ -860,6 +861,9 @@ header .cursor {
   .portfolio .linkButtons {
     padding: 1%;
   }
+  .portfolio .projectWriteUp .skillButton p {
+    display: none;
+  }
   .portfolio .projectWriteUp .overlay {
     display: none;
   }
@@ -873,8 +877,8 @@ header .cursor {
     display: block;
     z-index: 10;
     position: absolute;
-    width: 82vw;
-    height: 40vh;
+    width: 130%;
+    height: 100%;
     opacity: 0;
     padding: 5%;
     border-radius: 10px;
@@ -884,14 +888,19 @@ header .cursor {
     background-color: #09091c;
   }
   .portfolio .overlay h2 {
-    font-size: 2rem;
+    font-size: 0.9rem;
   }
   .portfolio .overlay p {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
   .portfolio .project:hover .overlay,
   .portfolio .project:focus .overlay {
     opacity: 0.98;
+  }
+  .portfolio .project .projectImageLeft,
+  .portfolio .project .projectImageRight {
+    margin-right: 0;
+    margin-left: 0;
   }
   .aboutMe {
     display: -webkit-box;
