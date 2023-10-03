@@ -411,8 +411,7 @@ header .cursor {
   font-style: italic;
 }
 .portfolio img {
-  width: 50%;
-  height: 40%;
+  width: 30vw;
   border: solid 2px rgba(9, 9, 28, 0.7);
   border-radius: 10px;
 }
