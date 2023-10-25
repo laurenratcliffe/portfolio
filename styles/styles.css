@@ -228,7 +228,7 @@ html {
 
 body {
   text-rendering: optimizeLegibility;
-  background-color: #5b6e88;
+  background-color: #09091c;
 }
 
 .wrapper {
@@ -248,7 +248,7 @@ body {
 }
 
 nav {
-  background-color: #5b6e88;
+  background-color: #09091c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,7 +441,7 @@ header .cursor {
       -ms-flex-align: center;
           align-items: center;
   font-family: "Poppins", sans-serif;
-  color: #5b6e88;
+  color: #09091c;
   margin-top: 15%;
   margin-bottom: 10%;
   -webkit-box-flex: 1;
@@ -452,7 +452,7 @@ header .cursor {
 }
 .portfolio a {
   text-decoration: none;
-  background-color: #5b6e88;
+  background-color: #09091c;
   border: solid 1px white;
   color: white;
   padding: 3%;
@@ -460,7 +460,7 @@ header .cursor {
   border-radius: 5px;
 }
 .portfolio a:hover {
-  color: #5b6e88;
+  color: #09091c;
   background-color: white;
   border: solid 1px white;
 }
@@ -620,7 +620,7 @@ header .cursor {
   font-size: 3.5rem;
   text-align: center;
   color: #f8b400;
-  text-shadow: 3px 3px #5b6e88;
+  text-shadow: 3px 3px #09091c;
   padding: 15px;
 }
 .aboutMe .aboutMeText {
@@ -636,7 +636,7 @@ header .cursor {
   color: rgb(255, 255, 255);
   min-height: 30vh;
   font-family: "Poppins", sans-serif;
-  background-color: #5b6e88;
+  background-color: #09091c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -726,7 +726,7 @@ header .cursor {
 
 .contactMe {
   min-height: 85vh;
-  background-color: #5b6e88;
+  background-color: #09091c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -945,10 +945,10 @@ header .cursor {
   }
   .portfolio a {
     background-color: white;
-    color: #5b6e88;
+    color: #09091c;
   }
   .portfolio a:hover {
-    background-color: #5b6e88;
+    background-color: #09091c;
     border: solid 1px white;
     color: white;
   }
