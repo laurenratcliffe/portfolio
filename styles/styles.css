@@ -358,7 +358,7 @@ header h2 {
   font-weight: 400;
   z-index: 100;
 }
-header i {
+header .bi-caret-down {
   color: #f8b400;
   border: solid 2px #f8b400;
   border-radius: 10px;

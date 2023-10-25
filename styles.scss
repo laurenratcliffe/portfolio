@@ -9,9 +9,6 @@ html { box-sizing: border-box;}
 // $primaryFont:'Sen', sans-serif;
 $primaryFont: 'Poppins', sans-serif;
 $primaryColour: #09091c;
-// $primaryColour: #264653;
-// $primaryColour: #5b6e88;
-// $primaryColour: #032632;
 $secondaryColour:#2c786c;
 $yellowColour: #f8b400;
 $creamColour: rgb(250, 245, 228);
@@ -128,7 +125,7 @@ header {
         font-weight: 400;
         z-index: 100
     }
-    i { 
+    .bi-caret-down { 
         color: $yellowColour;
         border: solid 2px $yellowColour;
         border-radius: 10px;
@@ -136,12 +133,17 @@ header {
         position: absolute;
         top: 90vh;
         left: 38%
-    }
-
-    .bi-caret-down { 
         animation: MoveUpDown 1s infinite;
         position: absolute;
     }
+
+    .bi-github::before {
+        display: block;
+        font-size: 2em;
+        margin-top: 2vh;
+    }
+    
+    
 
     @keyframes moveUpDown {
         0%, 100% {
@@ -168,8 +170,6 @@ header {
 }
 
 
-
-
 .portfolioLeftSide { 
    display: flex;
    flex-direction: column;
@@ -179,62 +179,6 @@ header {
    background-repeat: repeat;
    overflow: hidden;
 }
-
-
-
-// .portfolioLeftSide:before, 
-// .portfolioLeftSide:after{ 
-//     position: relative;
-//     top: 35%;
-//     left: 35%;
-//     width: 4em;
-//     height: 4em;
-//     content: '.';
-//     font-size: 4em;
-//     // mix-blend-mode: screen;
-//     animation: animate 75s -60s infinite ease-in-out alternate;
-//     overflow: hidden;
-// }
-
-// @keyframes animate { 
-//     from {
-//         transform: rotate(0deg) scale(12) translateX(-20px);
-//       }
-//       to {
-//         transform: rotate(360deg) scale(18) translateX(20px);
-//       };
-//       overflow: hidden;
-// }
-
-// .portfolioLeftSide:before { 
-//     text-shadow:
-//       150px 55px 7px red,
-//       -30px 25px 7px yellow,
-//       35px 60px 7px green,
-//       60px 15px 7px orange,
-//       70px 40px 7px blue,
-//       40px 60px 7px purple,
-//     ;  
-//     animation-duration: 10s;
-//     animation-delay: -27s;
-//     position: absolute;
-//     overflow: hidden;
-//   }
-
-// .portfolioLeftSide:after { 
-// //   text-shadow:
-// //     150px 5px 7px blue,
-// //     60px 150px 7px hwb(0 0% 100%),
-// //     20px 15px 7px hwb(0 0% 100%),
-// //     150px 5px 7px hwb(0 0% 100%),
-// //     60px 150px 7px hwb(0 0% 100%),
-// //     20px 15px 7px hwb(0 0% 100%),
-// //   ;  
-//   animation-duration: 10s;
-//   animation-delay: -33s;
-//   position: absolute;
-//   overflow: hidden;
-// }
 
 
 .portfolio  { 
@@ -358,8 +302,7 @@ header {
 
 
 .aboutMe { 
-    
-    // margin: 10%;
+  
     padding: 5%;
     font-family: $primaryFont;
     display: flex;
@@ -391,7 +334,6 @@ header {
         padding: 15px;
     }
     .aboutMeText{
-    // background-color: white;
     padding: 5%;
     border-radius: 25px;
     p {
@@ -486,7 +428,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 10vh;
+    
     h4 { 
         text-align: center;
         font-family: $primaryFont;
