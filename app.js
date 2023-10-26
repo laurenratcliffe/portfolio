@@ -83,11 +83,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const projectWriteUps = document.querySelectorAll('.projectWriteUp');
 
-
 projectWriteUps.forEach((projectWriteUp) => {
   projectWriteUp.addEventListener('click', () => {
     projectWriteUp.classList.toggle('show-overlay');
   });
 });
+
+//mobile nav bar menu
 
 
