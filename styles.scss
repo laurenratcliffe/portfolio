@@ -238,7 +238,7 @@ header {
         text-align: justify;
     }
     img {
-        width: 30vw;
+        width: 40%;
         // height: 40%;
         border: solid 2px rgb(9, 9, 28, 0.7);
         border-radius: 10px;
@@ -423,7 +423,7 @@ header {
             color: #08DAFF;
         }
         .fa-square-github:hover { 
-            color: #b2b4bd;
+            color: #45464e;
         }
 
         .fa-fire:hover { 
@@ -598,6 +598,10 @@ header {
     flex-direction: column;
     align-items: center;
     
+    .projectWriteUp { 
+        flex-direction: column;
+    }
+
     h3{
         font-size: 2rem;
         text-align: center;
@@ -612,10 +616,19 @@ header {
         margin-left: 0;
         margin-right: 0;
         width: 130%;
-        height: 100%;
-        border-radius: 10px; 
+        height: 80%;
+        // border-radius: 10px; 
     }
     
+    .proniaImage { 
+        width: 130%;
+        height: 100%;
+        // border-radius: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
     a { 
         background-color: white;
         color: $primaryColour;
@@ -626,11 +639,16 @@ header {
         border: solid 1px white;
         color: white;
     }
-    .linkButtons a { 
-        padding: 2%;
-        width: 2vw;
-        font-size: 2.5vw;
+    .linkButtons {
+        margin-top: 3vh;
+        a { 
+                padding: 2%;
+                width: 2vw;
+                font-size: 2.5vw;
+        }
     }
+    
+   
     
     .project { 
         .projectImageLeft, 
@@ -648,8 +666,9 @@ header {
                 text-align: center;
             }
         .skillButton { 
-            margin-right: 0;
-            justify-content: center;
+            // margin-right: 0;
+            // justify-content: center;
+            display: none;
             p { 
                 border: solid 1px black;
                 margin-bottom: 3%; 
@@ -679,12 +698,12 @@ header {
         .overlay { 
             display: block;
             z-index: 10;
-            padding: 5%;
+            padding: 7%;
             position: absolute;
-            width: 76vw;
+            width: 80vw;
             height: 100%;
             opacity: 0;
-            border-radius: 15px;
+            // border-radius: 25px;
             transition: .5s ease;
             color: black;
             background-color: white;
@@ -700,7 +719,7 @@ header {
         }
     
 
-    } 
+    }
     }
     .project:hover .overlay, 
     .project:focus .overlay {

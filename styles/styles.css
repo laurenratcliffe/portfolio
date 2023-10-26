@@ -493,7 +493,7 @@ header .cursor {
   text-align: justify;
 }
 .portfolio img {
-  width: 30vw;
+  width: 40%;
   border: solid 2px rgba(9, 9, 28, 0.7);
   border-radius: 10px;
 }
@@ -732,7 +732,7 @@ header .cursor {
   color: #08DAFF;
 }
 .codingSkills .iconsContainer .fa-square-github:hover {
-  color: #b2b4bd;
+  color: #45464e;
 }
 .codingSkills .iconsContainer .fa-fire:hover {
   color: #f8b400;
@@ -937,6 +937,12 @@ header .cursor {
         -ms-flex-align: center;
             align-items: center;
   }
+  .portfolio .projectWriteUp {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .portfolio h3 {
     font-size: 2rem;
     text-align: center;
@@ -951,8 +957,14 @@ header .cursor {
     margin-left: 0;
     margin-right: 0;
     width: 130%;
+    height: 80%;
+  }
+  .portfolio .proniaImage {
+    width: 130%;
     height: 100%;
-    border-radius: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
   }
   .portfolio a {
     background-color: white;
@@ -962,6 +974,9 @@ header .cursor {
     background-color: #09091c;
     border: solid 1px white;
     color: white;
+  }
+  .portfolio .linkButtons {
+    margin-top: 3vh;
   }
   .portfolio .linkButtons a {
     padding: 2%;
@@ -980,10 +995,7 @@ header .cursor {
     text-align: center;
   }
   .portfolio .project .projectWriteUp .skillButton {
-    margin-right: 0;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    display: none;
   }
   .portfolio .project .projectWriteUp .skillButton p {
     border: solid 1px black;
@@ -1007,12 +1019,11 @@ header .cursor {
   .portfolio .project .overlay {
     display: block;
     z-index: 10;
-    padding: 5%;
+    padding: 7%;
     position: absolute;
-    width: 76vw;
+    width: 80vw;
     height: 100%;
     opacity: 0;
-    border-radius: 15px;
     -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
     color: black;

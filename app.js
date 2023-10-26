@@ -86,7 +86,6 @@ const projectWriteUps = document.querySelectorAll('.projectWriteUp');
 
 projectWriteUps.forEach((projectWriteUp) => {
   projectWriteUp.addEventListener('click', () => {
-    console.log('ive been clicked')
     projectWriteUp.classList.toggle('show-overlay');
   });
 });
