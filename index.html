@@ -199,8 +199,8 @@
     <footer class="contactMe wrapper" id="contact">
         <h4>LET'S CONNECT!</h4>
         <p class="wrapper">If you have exciting opportunities to discuss or simply want to chat over coffee, feel free to reach out via the form below. Looking forward to connecting!</p>
-        <form class="wrapper" action="" method="" name="">
         
+        <form class="wrapper" action="https://api.web3forms.com/submit" method="POST">
         <div class="nameAndEmail">
             <div class="name">
                 <label for="name">YOUR NAME</label>
@@ -215,6 +215,8 @@
         </div>
         
         <label for="subject">SUBJECT LINE</label>
+
+        <input type="hidden" name="access_key" value="1bd6acb5-c448-42f0-98ae-1b2e961439ec">
         <input type="text" name="email" id="subject" required="true">
 
         <label for="feedback">MESSAGE</label>
