@@ -37,22 +37,25 @@
     </nav>
     <div class="portfolioLeftSide" id="dots">
     <header id="home">
-        <img class="headerIcon" src="./assets/laurenIcon.png" alt="website logo made with the letter L and R connected">
-        <h1> LAUREN RATCLIFFE </h1>
-        <h2>I am <span id="typewriter"></span><span class="cursor">|</span></h2>
-        <a href="https://github.com/laurenratcliffe" target="_blank"><i class="bi bi-github"></i></a>
-        <a href="#project"><i class="bi bi-caret-down"></i></i></a>
-
-        
+        <div class="headerText">
+            <img class="headerIcon" src="./assets/laurenIcon.png" alt="website logo made with the letter L and R connected">
+            <h1> LAUREN RATCLIFFE </h1>
+            <h2>I am <span id="typewriter"></span><span class="cursor">|</span></h2>
+            <a href="https://github.com/laurenratcliffe" target="_blank"><i class="bi bi-github"></i></a>
+        </div>
+        <div class="downIcon">
+            <a href="#project"><i class="bi bi-caret-down"></i></a>
+        </div>
     </header>
+
     <section class="portfolio wrapper" id="project">
        
         <h3>CHECK OUT MY RECENT WORK!</h3>
-        <p class="learnMoreClickText">Click on the image to learn more</p>
-    
+        <!-- <p class="learnMoreClickText">Click on the image to learn more</p> -->
         <div class="project">
-            <div class="projectWriteUp projectImageRight">
-                <div class="overlay">
+            <div class="projectWriteUp projectImageLeft">
+                <img class="projectImageRight" id="portfolioImg" src="./assets/StrideCast.png">
+                <div>
                     <h2>StrideCast - Podcast Planner</h2>
                     <p>Acted as project manager on this group programming React App which was created with seamless user experience in mind - users input the length of their walk and their preferred podcast genre, and are provided with a list of podcasts to listen to or save for later. </p>
                     <div class="skillButton">
@@ -65,14 +68,13 @@
                         <a href="https://github.com/podcast-planner-project-4/StrideCast" target="_blank">View Code</a>
                     </div>
                 </div>
-                <img class="projectImageRight" id="portfolioImg" src="./assets/StrideCast.png">
             </div> 
         </div>
 
         <div class="project">
-            <div class="projectWriteUp projectImageLeft">
-                <img class="projectImageLeft" id="portfolioImg" src="./assets/mmm-image.png">
-                <div class="overlay">
+            <div class="projectWriteUp projectImageRight">
+                <img id="portfolioImg" src="./assets/mmm-image.png">
+                <div>
                     <h2>Make Me a Meal - Recipe Generator</h2>
                     <p>Have you ever struggled to think of a healthy meal for your day? Make Me a Meal was created to help with this common struggle. Utilizing dynamic API calls, state management, and multi-filter UI, the app allows the user to find recipes based on dietary restrictions and preferences.</p>
                     <div class="skillButton">
@@ -89,8 +91,9 @@
             </div>
         </div>
         <div class="project">
-            <div class="projectWriteUp ">
-                <div class="overlay">
+            <div class="projectWriteUp projectImageLeft">
+                <img class="proniaImage" id="portfolioImg" src="./assets/pronia2.png"> 
+                <div >
                     <h2>Pronia E-Commerce Store</h2>
                     <p>A fully functional and responsive multi-page PSD conversion based on a provide mock-up design. </p>
                     <div class="skillButton">
@@ -103,7 +106,6 @@
                         <a href="https://github.com/laurenratcliffe/project-1" target="_blank">View Code</a>
                     </div>
                 </div> 
-                <img class="projectImageRight proniaImage" id="portfolioImg" src="./assets/pronia2.png"> 
             </div>
         </div>
         
@@ -215,9 +217,8 @@
         </div>
         
         <label for="subject">SUBJECT LINE</label>
-
-        <input type="hidden" name="access_key" value="1bd6acb5-c448-42f0-98ae-1b2e961439ec">
-        <input type="text" name="email" id="subject" required="true">
+            <input type="hidden" name="access_key" value="1bd6acb5-c448-42f0-98ae-1b2e961439ec">
+            <input type="text" name="email" id="subject" required="true">
 
         <label for="feedback">MESSAGE</label>
         <textarea name="emailMessage" id="emailMessage" cols="30" rows="10" minlength="5" maxlength="1000"></textarea>

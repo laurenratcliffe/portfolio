@@ -90,16 +90,36 @@ header {
     justify-content: center; 
     align-items: center;
     line-height: 0;
+
     span { 
         color: $yellowColour;
     }
-
+    
+    .headerText { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .headerIcon { 
-        max-width: 10%;
-        max-height: 8%;
+        max-width: 7vw;
+        max-height: auto;
         border-radius: 40%;
         margin-bottom: 2%;
     }
+
+    .downIcon { 
+        position: relative;
+        top: 25vh;
+
+        .bi-caret-down { 
+            color: $yellowColour;
+            border: solid 2px $yellowColour;
+            border-radius: 10px;
+            padding: 0.5vw 1vw 0.7vw 1vw;
+            animation: MoveUpDown 1s infinite;
+        }
+    }
+
     a { 
         text-decoration: none;
         color: white;
@@ -136,17 +156,9 @@ header {
         font-weight: 400;
         z-index: 100
     }
-    .bi-caret-down { 
-        color: $yellowColour;
-        border: solid 2px $yellowColour;
-        border-radius: 10px;
-        padding: 0.5% 1% 0.5% 1%;
-        position: absolute;
-        top: 90vh;
-        left: 40%;
-        animation: MoveUpDown 1s infinite;
-        position: absolute;
-    }
+    
+
+  
 
     .bi-github::before {
         display: block;
@@ -238,8 +250,7 @@ header {
         text-align: justify;
     }
     img {
-        width: 40%;
-        // height: 40%;
+        width: 30vw;
         border: solid 2px rgb(9, 9, 28, 0.7);
         border-radius: 10px;
         
@@ -278,12 +289,15 @@ header {
         }
         }
 
-        .projectImageLeft { 
+        .projectImageLeft img{ 
             margin-right: 2vw;
         }
-        .projectImageRight { 
+        .projectImageRight {
+        flex-direction: row-reverse;
+        img{ 
             margin-left: 2vw;
         }
+    }
     }
 }
 
@@ -355,7 +369,7 @@ header {
     padding-top: 2%;
     border-radius: 25px;
     p {
-        font-size: 1.05rem;
+        font-size: 1.5rem;
         color: white;
     }
 }
@@ -597,10 +611,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    .projectWriteUp { 
-        flex-direction: column;
-    }
 
     h3{
         font-size: 2rem;
@@ -648,9 +658,17 @@ header {
         }
     }
     
-   
     
+
     .project { 
+        margin-bottom: 15vh;
+        flex-direction: column;
+        img { 
+            width: 70vw;
+            margin-top: 5vh;
+        }
+
+       
         .projectImageLeft, 
         .projectImageRight { 
             margin-right: 0;
@@ -658,73 +676,84 @@ header {
         }
         
         .projectWriteUp { 
-            // text-align: center;
-            h2, 
-            p, 
-            a,  
-            .linkButtons { 
-                text-align: center;
+            flex-direction: column;
+
+            h2 { 
+                font-size: 4vw;
+                text-align: left;
+                padding: 0;
             }
+
+            p { 
+                font-size: 2.5vw;
+                text-align: left;
+            }
+            // h2, 
+            // p, 
+            // a,  
+            // .linkButtons { 
+            //     text-align: center;
+            // }
         .skillButton { 
             // margin-right: 0;
             // justify-content: center;
-            display: none;
+            // display: none;
             p { 
-                border: solid 1px black;
-                margin-bottom: 3%; 
-                padding: 1%; 
+                border: solid 1px white;
+                margin-bottom: 1%; 
+                // padding: 1%; 
             }
         }
 
         .linkButtons a { 
-            background-color: black;
-            color: white;
+            background-color: white;
+            color: $primaryColour;
             margin: 0;
         }
         }
 
-        .projectWriteUp .overlay {
-            display: none; 
-          }
+        // .projectWriteUp .overlay {
+        //     display: none; 
+        //   }
           
-          .projectWriteUp.show-overlay .overlay {
-            display: block; 
-          }
+        //   .projectWriteUp.show-overlay .overlay {
+        //     display: block; 
+        //   }
     
-        .overlay { 
-            display: none;
-        }
+        // .overlay { 
+        //     display: none;
+        // }
     
-        .overlay { 
-            display: block;
-            z-index: 10;
-            padding: 7%;
-            position: absolute;
-            width: 80vw;
-            height: 100%;
-            opacity: 0;
-            // border-radius: 25px;
-            transition: .5s ease;
-            color: black;
-            background-color: white;
-            h2 { 
-                font-size: 3.5vw;
+        // .overlay { 
+        //     display: block;
+        //     z-index: 10;
+        //     padding: 7%;
+        //     position: absolute;
+        //     width: 80vw;
+        //     height: 100%;
+        //     opacity: 0;
+        //     // border-radius: 25px;
+        //     transition: .5s ease;
+        //     color: black;
+        //     background-color: white;
+        //     h2 { 
+        //         font-size: 3.5vw;
                
-            }
-            p { 
-                font-size: 2.5vw;
-                text-align: left;
-                margin-bottom: 0;
-            }
-        }
+        //     }
+        //     p { 
+        //         font-size: 2.5vw;
+        //         text-align: left;
+        //         margin-bottom: 0;
+        //     }
+        // }
     
 
     }
     }
-    .project:hover .overlay, 
-    .project:focus .overlay {
-        opacity: 0.98;
-    }
+    // .project:hover .overlay, 
+    // .project:focus .overlay {
+    //     opacity: 0.98;
+    // }
     
 }
 
