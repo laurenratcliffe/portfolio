@@ -71,9 +71,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const bounding = project.getBoundingClientRect();
             if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
                 project.classList.add('in-view');
-                project.style.animation = 'project-appear 0.5s ease forwards'; // Apply the animation
+                project.style.animation = 'project-appear 0.5s ease forwards'; 
             }
-        
         });
     });
 });
